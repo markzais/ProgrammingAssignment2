@@ -13,9 +13,7 @@ makeCacheMatrix <- function(x = matrix()) {
   get <- function() x
   seti <- function(inverse) i <<- inverse
   geti <- function() i
-  list(set = set, get = get,
-       seti = seti,
-       geti = geti)
+  list(set = set, get = get, seti = seti, geti = geti)
 }
 
 
@@ -30,7 +28,7 @@ cacheSolve <- function(x, ...) {
   # if the inverse has already been calculated
   if (!is.null(i)){
     # get it from the cache and skips the computation.
-    message("getting cached data")
+    message("Stand by. Getting cached data")
     return(i)
   }
 
